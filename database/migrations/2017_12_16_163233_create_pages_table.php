@@ -17,8 +17,8 @@ class CreatePagesTable extends Migration
             $table->increments('id');
             $table->string('layout', 100)->default('customer');
             $table->string('title')->comment('Page title');
-            $table->string('meta_keywords')->nullable();
-            $table->string('meta_description')->nullable();
+            $table->mediumText('meta_keywords')->nullable();
+            $table->mediumText('meta_description')->nullable();
             $table->string('view_name')->nullable();
             $table->string('slug')->unique();
             $table->unsignedInteger('view_count')->default(0);
