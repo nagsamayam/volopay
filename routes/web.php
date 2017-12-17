@@ -12,9 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $page = \App\Models\Page::find(1);
+    return view('welcome', compact('page'));
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('{slug}', 'PagesController@show');
