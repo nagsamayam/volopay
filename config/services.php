@@ -35,4 +35,12 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'fresh_chat' => [
+        'token' => env('FRESHCHAT_TOKEN')
+    ],
+
+    'google_analytics' => [
+        'tracking_id' => env('GA_TRACKING_ID')
+    ]
+
 ];
